@@ -136,3 +136,7 @@ aside img {
 footer {
   margin-top: 10px;
 }
+
+.content {
+  column-count: 2;
+}
