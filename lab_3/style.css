@@ -137,6 +137,6 @@ footer {
   margin-top: 10px;
 }
 
-.content {
-  column-count: 2;
+.column {
+  flex: 50%;
 }
