@@ -12,6 +12,7 @@ html {
     justify-content: space-between;
     flex-flow: row wrap;
     background-color: #FFFE82;
+    padding: 1%;
   }
 .photo {
     flex: 1;
