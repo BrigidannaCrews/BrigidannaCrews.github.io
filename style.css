@@ -20,6 +20,10 @@ html {
   h1{
     padding: 40px;
   }
+
+  .header img{
+    padding: 40px;
+  }
   
   .photo img{
   display: block;
