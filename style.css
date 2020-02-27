@@ -9,7 +9,7 @@ html {
 .header {
     margin-bottom: 10px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-flow: row wrap;
     background-color: #FFFE82;
   }
