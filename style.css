@@ -46,8 +46,11 @@ html {
   font-family: 'Raleway', sans-serif;
   justify-content: center;
   align-items: center;
+  border-radius: 15px;
 }
 
 p{
   width: 250px;
 }
+
+@media screen and (max-width : 1000px)
