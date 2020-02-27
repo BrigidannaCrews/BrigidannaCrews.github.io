@@ -22,6 +22,7 @@ html, body {
 
   h1{
     padding: 40px;
+    font-family: 'PT Serif Caption', serif;
   }
 
   .header img{
@@ -38,6 +39,7 @@ html, body {
 .content{
   display: flex;
   justify-content: space-around;
+  border-radius: 15px;
 }
 .photo{
   flex-direction: column;
@@ -56,6 +58,7 @@ html, body {
   align-items: center;
   border-radius: 15px;
   padding: 10px;
+  margin: 20.5px;
 }
 
 .resume{
@@ -75,6 +78,8 @@ p{
   .photo{
     display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
   }
 
 }
