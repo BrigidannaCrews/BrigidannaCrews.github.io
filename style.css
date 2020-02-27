@@ -1,9 +1,17 @@
+
+/* */
+html {
+  font-size: 10px;
+  background-color: #BC82FF;
+}
+
 /*header*/
 .header {
     margin-bottom: 10px;
     display: flex;
     justify-content: space-between;
     flex-flow: row wrap;
+    background-color: #FFFE82;
   }
 .photo {
     flex: 1;
