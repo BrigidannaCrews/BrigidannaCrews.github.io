@@ -1,7 +1,7 @@
 
 /* */
 html {
-  
+
   background-color: #BC82FF;
 }
 
@@ -24,6 +24,10 @@ html {
   font-style: italic;
 
 }
+.resume{
+  background-color: #FFF7CF;
+}
+
 .description{
 
 }
