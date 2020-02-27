@@ -7,7 +7,7 @@ html {
 
 /*header*/
 .header {
-    margin-bottom: 10px;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -26,6 +26,7 @@ html {
 }
 .resume, p{
   background-color: #FFF7CF;
+  justify-content: center;
 }
 
 .description{
