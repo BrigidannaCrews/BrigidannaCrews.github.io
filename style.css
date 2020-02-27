@@ -10,6 +10,7 @@ html {
 
     display: flex;
     justify-content: space-between;
+    font-size: large;
     align-items: center;
     flex-flow: row wrap;
     background-color: #FFFE82;
