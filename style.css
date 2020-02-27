@@ -47,3 +47,7 @@ html {
   justify-content: center;
   align-items: center;
 }
+
+p{
+  width: 250px;
+}
