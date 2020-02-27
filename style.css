@@ -34,6 +34,7 @@ html {
 
 .content{
   display: flex;
+  justify-content: space-around;
 }
 .photo{
   flex-direction: column;
