@@ -32,9 +32,13 @@ html {
   padding-top: 20.15px;
   }
 
-.photo {
+.content{
+  display: flex;
+}
+.photo{
+  flex-direction: column;
+}
 
-  }
 .position{
   
   font-weight: 400;
