@@ -1,8 +1,9 @@
 
 /* */
-html {
+html, body {
 
   background-color: #BC82FF;
+  margin: auto;
 }
 
 /*header*/
@@ -15,6 +16,7 @@ html {
     flex-flow: row wrap;
     background-color: #FFFE82;
     color: #BC82FF;
+    width: 100%
 
   }
 
@@ -28,8 +30,9 @@ html {
   
   .photo img{
   display: block;
-  height: 250px;
-  padding-top: 20.15px;
+  height: 265px;
+  padding: 25px;
+
   }
 
 .content{
@@ -52,6 +55,7 @@ html {
   justify-content: center;
   align-items: center;
   border-radius: 15px;
+  padding: 10px;
 }
 
 .resume{
@@ -59,7 +63,8 @@ html {
 }
 
 p{
-  width: 350px;
+  width: 250px;
+  height: 50px;
 }
 
 @media screen and (max-width : 1000px){
