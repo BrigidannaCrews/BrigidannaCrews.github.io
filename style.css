@@ -15,6 +15,13 @@ html {
     background-color: #FFFE82;
 
   }
+  
+  .wrapper img{
+  display: block;
+  height: 60px;
+  padding-top: 20.15px;
+  }
+
 .photo {
 
   }
