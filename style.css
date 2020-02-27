@@ -10,7 +10,7 @@ html {
 
     display: flex;
     justify-content: space-between;
-    font-weight: 700;
+    font-size: large;
     align-items: center;
     flex-flow: row wrap;
     background-color: #FFFE82;
@@ -47,9 +47,6 @@ html {
   justify-content: center;
 }
 
-.description{
-
-}
-.answers{
-  
+.wrapper{
+  align-items: center;
 }
