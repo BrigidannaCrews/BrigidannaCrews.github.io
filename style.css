@@ -54,8 +54,12 @@ html {
   border-radius: 15px;
 }
 
+.resume{
+  border-style: dashed;
+}
+
 p{
-  width: 250px;
+  width: 350px;
 }
 
 @media screen and (max-width : 1000px){
