@@ -1,5 +1,4 @@
 
-/* */
 html, body {
 
   background-color: #FFFE82;
@@ -25,14 +24,32 @@ html, body {
     font-family: 'PT Serif Caption', serif;
   }
 
-  h2{
-    font-family: 'PT Serif Caption', serif;
-  }
-
   .header img{
     padding: 40px;
   }
+
+  /*wrapper and content*/
   
+  .wrapper{
+    display: flex;
+    justify-content: center;
+  }
+  
+  .content{
+    display: flex;
+    justify-content: space-around;
+    border-radius: 15px;
+    max-width: 960px;
+    margin-top: 15px;
+  }
+
+  /*photo*/
+
+  .photo{
+    display: flex;
+    flex-direction: column;
+    }
+
   .photo img{
   display: block;
   height: 265px;
@@ -42,21 +59,20 @@ html, body {
 
   }
 
- .wrapper{
-  display: flex;
-  justify-content: center;
+/*resume and caption*/
+.resume{
+
+  border-style: dashed;
 }
 
-.content{
-  display: flex;
-  justify-content: space-around;
+.resume, p{
+  background-color: #FFF7CF;
+  font-family: 'Raleway', sans-serif;
+  justify-content: center;
+  align-items: center;
   border-radius: 15px;
-  max-width: 960px;
-  margin-top: 15px;
-}
-.photo{
-  display: flex;
-  flex-direction: column;
+  padding: 10px;
+  margin: 20.5px;
 }
 
 .position{
@@ -68,19 +84,9 @@ html, body {
   margin-bottom: 2px;
 
 }
-.resume, p{
-  background-color: #FFF7CF;
-  font-family: 'Raleway', sans-serif;
-  justify-content: center;
-  align-items: center;
-  border-radius: 15px;
-  padding: 10px;
-  margin: 20.5px;
-}
 
-.resume{
-
-  border-style: dashed;
+h2{
+  font-family: 'PT Serif Caption', serif;
 }
 
 p{
