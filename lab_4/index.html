@@ -39,6 +39,23 @@
         content.innerHTML = "Hello world";
         myHeading.innerHTML = myName + '\'s Lab 4' + " " + full_name_len;
 
+        let par_1 = document.createElement("P");   
+        let par_1_text = document.createTextNode("My name has" + " " + full_name_len + " "+ "characters."); 
+        par_1.appendChild(par_1_text);                         
+        document.getElementsByClassName("content")[0].appendChild(par_1);
+
+        let par_2 = document.createElement("P");   
+        let par_2_text = document.createTextNode("The third character in my name is" + " "+ third_char + "."); 
+        par_2.appendChild(par_2_text);                         
+        document.getElementsByClassName("content")[0].appendChild(par_2);
+
+        let br = document.createElement('br'); 
+        par_2.appendChild(br); 
+  
+        let par_2_text_2 = document.createTextNode(last_three); 
+        par_2.appendChild(par_2_text_2);                         
+        document.getElementsByClassName("content")[1].appendChild(par_2);
+
       }
     </script>
   </body>
