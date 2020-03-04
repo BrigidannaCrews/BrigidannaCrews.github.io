@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Brigidanna Crews's Lab</title>
+    <title>Prof A's Demo Page</title>
     <link rel="stylesheet" type="text/css" href="./style.css" />
   </head>
 
   <body>
     <div class="container">
       <div class="wrapper">
-        <div class="header">Brigidanna Crews's Lab</div>
+        <div class="header">Prof A's Demo Page</div>
         <button class="button" onclick="clickMe()">
           Click me to make a change
         </button>
@@ -26,8 +26,19 @@
     </div>
     <script>
       function clickMe() {
+        let myName = 'Brigidanna Crews';
+        let first_name = myName.slice(0,10);
+        let last_name = myName.slice(11,16);
+        let full_name = first_name + last_name;
+        let full_name_len = full_name.length;
+        let third_char = full_name[2];
+
+        const myHeading = document.querySelector('.header');
         const content = document.querySelector(".content");
         content.innerHTML = "Hello world";
+        myHeading.innerHTML = myName + '\'s Lab 4' + " " + full_name_len;
+
+        /* */
       }
     </script>
   </body>
