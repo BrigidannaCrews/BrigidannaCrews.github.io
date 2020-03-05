@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+  <meta charset="utf-8">
   <title>Brigidanna Crews's List of Countries</title>
   <link rel="stylesheet" type="text/css" href="./styles.css">
 </head>
@@ -267,7 +268,8 @@
     ]
     console.log("List of countries in the world", countries);
 
-    let ordered_list = document.createElement("ol");                          
+    let ordered_list = document.createElement("ol");      
+    ordered_list.setAttribute('class', 'msgBox');                    
     document.getElementsByClassName("content")[0].appendChild(ordered_list);
 
 
