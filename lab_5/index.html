@@ -15,6 +15,7 @@
       <button class="activate">Click me to replace list
         entries</button>
       <div class="content">
+        
       </div>
       <div class="footer"></div>
     </div>
@@ -267,11 +268,21 @@
       { "name": "Zimbabwe", "code": "ZW" }
     ]
     console.log("List of countries in the world", countries);
-
+    let myButton = document.querySelector('button');
     let ordered_list = document.createElement("ol");      
     ordered_list.setAttribute('class', 'msgBox');                    
     document.getElementsByClassName("content")[0].appendChild(ordered_list);
 
+    number = console.log(countries.length);
+
+      let par_1 = document.createElement("P");   
+      let par_1_text = document.createTextNode(number); 
+      par_1.appendChild(par_1_text); 
+      document.getElementsByClassName("content")[0].appendChild(par_1);
+
+    /*myButton.onclick = function() {
+      return Math.floor(Math.random() * Math.floor(max));
+    }*/
 
   </script>
 </body>
