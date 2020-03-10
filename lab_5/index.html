@@ -288,20 +288,33 @@
       content.appendChild(orderedList);
 
       /*choose 25 countries*/
-      for (let number = 0; number < 25; number++) {
-        /*chooses random country*/
-        let randomItem = temp_countries[Math.floor(Math.random()*temp_countries.length)];
+      let arr_randomItem = [];
+      for(let i = 0; i < 25; i++){
+      let randomItem = temp_countries[Math.floor(Math.random()*temp_countries.length)];
 
-        /*add randomItem to list item*/
-        new_countries.push(randomItem);
+      arr_randomItem.push(randomItem); 
+      }
+
+      /*add randomItem to list item*/
+
+      for (let number = 0; number < 25; number++) {
+
+        new_countries.push(arr_randomItem[number]); 
 
 
         /*finds index number of random country*/
-        last = temp_countries.indexOf(randomItem);
-
+        last = temp_countries.indexOf(arr_randomItem[number]);
 
         const listItem = document.createElement("li"); 
-        let textnode = document.createTextNode(randomItem.name, randomItem.code);
+        
+        /*code_countries = arr_randomItem[number].code.bold();
+
+        bold = document.createElement('strong');
+
+        let bold_code = bold.appendChild(arr_randomItem[number].code); */
+
+
+        let textnode = document.createTextNode(arr_randomItem[number].code + ' ' + arr_randomItem[number].name);
         listItem.appendChild(textnode);
         content.appendChild(listItem);            
         orderedList.appendChild(listItem);
