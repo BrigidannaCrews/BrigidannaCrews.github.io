@@ -15,9 +15,13 @@
       <button class="activate">Click me to replace list
         entries</button>
       <div class="content">
-        
+
+
+
       </div>
-      <div class="footer"></div>
+      <div class="footer">
+
+      </div>
     </div>
   </div>
   <script>
@@ -268,21 +272,48 @@
       { "name": "Zimbabwe", "code": "ZW" }
     ]
     console.log("List of countries in the world", countries);
+    const content = document.querySelector('.content');
+    content.innerHTML = '';
     let myButton = document.querySelector('button');
-    let ordered_list = document.createElement("ol");      
-    ordered_list.setAttribute('class', 'msgBox');                    
-    document.getElementsByClassName("content")[0].appendChild(ordered_list);
 
-    number = console.log(countries.length);
 
-      let par_1 = document.createElement("P");   
-      let par_1_text = document.createTextNode(number); 
-      par_1.appendChild(par_1_text); 
-      document.getElementsByClassName("content")[0].appendChild(par_1);
+    myButton.onclick = function() {
 
-    /*myButton.onclick = function() {
-      return Math.floor(Math.random() * Math.floor(max));
-    }*/
+      /* create copy of array*/
+      let temp_countries = countries.slice(0);
+      const new_countries = [];
+
+      const orderedList = document.createElement("ol");               
+      orderedList.ClassName = "countries";     
+      content.appendChild(orderedList);
+
+      /*choose 25 countries*/
+      for (let number = 0; number < 25; number++) {
+        /*chooses random country*/
+        let randomItem = temp_countries[Math.floor(Math.random()*temp_countries.length)];
+
+        /*add randomItem to list item*/
+        new_countries.push(randomItem);
+
+
+        /*finds index number of random country*/
+        last = temp_countries.indexOf(randomItem);
+
+
+        const listItem = document.createElement("li"); 
+        let textnode = document.createTextNode(randomItem.name, randomItem.code);
+        listItem.appendChild(textnode);
+        content.appendChild(listItem);            
+        orderedList.appendChild(listItem);
+
+        /*revise copy of array*/
+        temp_countries = temp_countries.splice(last, 1);
+
+      }
+
+      temp_countries.forEach(element => console.log(element));
+
+    }
 
   </script>
 </body>
