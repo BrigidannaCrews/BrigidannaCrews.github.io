@@ -272,12 +272,14 @@
       { "name": "Zimbabwe", "code": "ZW" }
     ]
     console.log("List of countries in the world", countries);
-    const content = document.querySelector('.content');
-    content.innerHTML = '';
+    // const content = document.querySelector('.content');
+    // content.innerHTML = '';
     let myButton = document.querySelector('button');
 
 
     myButton.onclick = function() {
+      const content = document.querySelector('.content');
+      content.innerHTML = "";
 
       /* create copy of array*/
       let temp_countries = countries.slice(0);
@@ -297,32 +299,27 @@
 
       /*add randomItem to list item*/
 
-      for (let number = 0; number < 25; number++) {
-
-        new_countries.push(arr_randomItem[number]); 
+      let list = content.innerHTML;
 
 
-        /*finds index number of random country*/
-        last = temp_countries.indexOf(arr_randomItem[number]);
+       for (let number = 0; number < 25; number++) {
 
-        const listItem = document.createElement("li"); 
-        
-        /*code_countries = arr_randomItem[number].code.bold();
-
-        bold = document.createElement('strong');
-
-        let bold_code = bold.appendChild(arr_randomItem[number].code); */
+         new_countries.push(arr_randomItem[number]); 
 
 
-        let textnode = document.createTextNode(arr_randomItem[number].code + ' ' + arr_randomItem[number].name);
-        listItem.appendChild(textnode);
-        content.appendChild(listItem);            
-        orderedList.appendChild(listItem);
+         /*finds index number of random country*/
+       let last = temp_countries.indexOf(arr_randomItem[number]);
 
-        /*revise copy of array*/
-        temp_countries = temp_countries.splice(last, 1);
+         const listItem = document.createElement("li"); 
+  
 
-      }
+         listItem.innerHTML = `<strong> ${arr_randomItem[number].code}</strong> ${arr_randomItem[number].name}`            
+         orderedList.appendChild(listItem);
+
+         /*revise copy of array*/
+         temp_countries = temp_countries.splice(last, 1);
+
+       }
 
       temp_countries.forEach(element => console.log(element));
 
