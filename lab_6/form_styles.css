@@ -4,6 +4,10 @@ body{
     background-color: #d8d9d4; 
 }
 
+h1{
+    text-align: center;
+}
+
 form {
 
   /* Center the form on the page */
@@ -50,4 +54,10 @@ ul {
     padding: 0;
     margin: 0;
 
+}
+
+.button{
+  background-color: #FFBD58; 
+  color: #FFFAF2;
+  border-radius: 15px;
 }
