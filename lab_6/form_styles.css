@@ -6,6 +6,8 @@ body{
 
 h1{
     text-align: center;
+    color: 	#484848;
+    font-family: 'Heebo', sans-serif;
 }
 
 form {
@@ -23,10 +25,11 @@ label {
 
    /* Uniform size & alignment */
   display: block;
-  width: 90px;
+  width: 10px;
   text-align: right;
-
-
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: 	#484848;
 }
 
 input, textarea {
@@ -51,13 +54,18 @@ input, textarea {
 ul {
 
     list-style: none;
-    padding: 0;
-    margin: 0;
+    /*padding: 0;
+    margin: 0;*/
+    align-content: center;
 
 }
 
 .button{
   background-color: #FFBD58; 
   color: #FFFAF2;
+  border-color: #FF9B39;
   border-radius: 15px;
+  width: 100px;
+  height: 40px;
+  margin-top: 10px;
 }
