@@ -110,12 +110,10 @@ h3 {
 
 /*Start of Lab CSS*/
 
+
+
 #map1 {
   width: 640px;
   height: 480px;
 }
 
-.leaflet-popup-tip-container {
-
-  /*border: 5px solid;*/
-}
