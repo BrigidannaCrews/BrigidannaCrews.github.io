@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <title>Maps Lab</title>
-    <link rel="stylesheet" type="text/css" href="./styles.css" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
     <link rel="stylesheet" 
     type = "text/css"
     href="./leaflet/leaflet.css"
@@ -1059,13 +1059,11 @@
       /*finds index number of random for place*/
       let last = food.indexOf(arr_randomItem[number]);
 
+      /*Malcolm's Help for .reverse*/
       let food_marker = L.popup()
       .setLatLng(food[last].geocoded_column_1.coordinates.reverse())
       .setContent(food[last].name)
       .addTo(mymap);
-
-
-      number++
     }
     
 

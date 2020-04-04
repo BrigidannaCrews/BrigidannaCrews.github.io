@@ -20,6 +20,7 @@ h3 {
   color: dimgrey;
 }
 
+
 .container {
   position: absolute;
   right: 0;
@@ -40,8 +41,7 @@ h3 {
   flex-direction: column;
   background: #fefefe;
 
-  /*changed border*/
-  border: 1px groove #ccc;
+  border: 1px dotted #ccc;
   margin: 25px;
 
 }
@@ -116,4 +116,18 @@ h3 {
   width: 640px;
   height: 480px;
 }
+
+.popupCustom .leaflet-popup-content-wrapper,
+.popupCustom .leaflet-popup-tip{
+
+background: #9EF2FF;
+font-style: bold;
+color:#FF8BFF;
+
+}
+
+
+
+
+
 
