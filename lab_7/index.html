@@ -1052,6 +1052,8 @@
 ,{"establishment_id":"2536","name":"DODGE CITY MARKET","category":"Convenience Store","inspection_date":"2019-10-28T00:00:00.000","inspection_results":"Critical Violations observed","city":"DISTRICT HTS","state":"MD","zip":"20747","address_line_1":"7409 MARLBORO PIKE","address_line_2":"------","food_from_approved_source":"In Compliance","food_protected_from":"In Compliance","ill_workers_restricted":"In Compliance","proper_hand_washing":"In Compliance","cooling_time_and_temperature":"In Compliance","cold_holding_temperature":"In Compliance","hot_holding_temperature":"In Compliance","cooking_time_and_temperature":"In Compliance","reheating_time_and_temperature":"In Compliance","hot_and_cold_running_water":"Out of Compliance","proper_sewage_disposal":"In Compliance","no_bare_hand_contact":"In Compliance","adequate_hand_washing":"In Compliance","rodent_and_insects":"Out of Compliance","food_contact_surfaces_and":"In Compliance","inspection_type":"Comprehensive","owner":"Do Ok Park","type":"Food Establishments","geocoded_column_1":{"type":"Point","coordinates":[-76.878309,38.847759]},":@computed_region_87xh_ddyp":"15814"}
 ,{"establishment_id":"782","name":"KAFE KOSMOS","category":"Full Service","inspection_date":"2019-10-25T00:00:00.000","inspection_results":"Critical Violations observed","city":"LANDOVER","state":"MD","zip":"20785","address_line_1":"8201 CORPORATE DR","address_line_2":"150","food_from_approved_source":"In Compliance","food_protected_from":"In Compliance","ill_workers_restricted":"In Compliance","proper_hand_washing":"In Compliance","cooling_time_and_temperature":"In Compliance","cold_holding_temperature":"Out of Compliance","hot_holding_temperature":"Out of Compliance","cooking_time_and_temperature":"In Compliance","reheating_time_and_temperature":"In Compliance","hot_and_cold_running_water":"In Compliance","proper_sewage_disposal":"In Compliance","no_bare_hand_contact":"In Compliance","adequate_hand_washing":"In Compliance","rodent_and_insects":"In Compliance","food_contact_surfaces_and":"Out of Compliance","inspection_type":"Comprehensive","owner":"SANG LIM","type":"Food Establishments","geocoded_column_1":{"type":"Point","coordinates":[-76.865193,38.946792]},":@computed_region_87xh_ddyp":"31451"}];
 
+      let layer
+
       /*choose 3 */
       let arr_randomItem = [];
 
@@ -1067,6 +1069,7 @@
       const str_sub = "";
 
       for (let number = 0; number < 3; number++){
+
       food.push(arr_randomItem[number]);
 
       /*finds index number of random for place*/
@@ -1076,10 +1079,12 @@
 
       let food_marker = L.marker(food[last].geocoded_column_1.coordinates.reverse()).addTo(mymap);
       let str_sub = "<b>" + food[last].name + "</b> "+"<br>" + "I am a medicore pop up."
-      food_marker.bindPopup(str_sub, popupCustom).addLayer();
+
+      food_marker.bindPopup(str_sub, popupCustom).openPopup();
+
 
     }
-    
+  
 
 
 
