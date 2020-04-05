@@ -39,12 +39,6 @@
         className: 'popupCustom'
       }
 
-      /*const marker = L.popup()
-      .bindPopup(popupCustom)
-      .setLatLng([38.9883, -76.9414])
-      .setContent("Hornbake Library")
-      .openOn(mymap);*/
-
       const marker = L.marker([38.985887, -76.941979]).addTo(mymap);
       const str_main = "<b>Hornbake Library</b><br>I am THE BEST pop up."
       marker.bindPopup(str_main, popupCustom).openPopup();
