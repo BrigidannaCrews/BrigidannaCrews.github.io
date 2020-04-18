@@ -28,7 +28,8 @@ function processDataForFrontEnd(req, res) {
   // Note that at no point do you "return" anything from this function -
   // it instead handles returning data to your front end at line 34.
     fetch(baseURL)
-      .then((r) => r.json())
+      .then((results) => results.json())
+      //you will process your data here
       .then((data) => {
         console.log(data);
         res.send({ data: data }); // here's where we return data to the front end
@@ -42,6 +43,9 @@ function processDataForFrontEnd(req, res) {
 // This is our first route on our server.
 // To access it, we can use a "GET" request on the front end
 // by typing in: localhost:3000/api or 127.0.0.1:3000/api
-app.get('/api', (req, res) => {processDataForFrontEnd(req, res)});
+app.get('/api', (req, res) => {
+  
+  console.log("touched /get");
+  processDataForFrontEnd(req, res)});
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
