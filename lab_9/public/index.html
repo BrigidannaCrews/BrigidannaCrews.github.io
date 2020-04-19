@@ -22,6 +22,27 @@
         return res;
       })
       .then(res => {
+        
+        //given by classmate
+        const chart = new CanvasJS.Chart("chartContainer", {
+            exportEnabled: true,
+            animationEnabled: true,
+            title: {
+              text: "Lets Find Somewhere to Eat",
+            },
+            legend: {
+              cursor: "pointer",
+            },
+            data: [
+              {
+                type: "pie",
+		            toolTipContent: "{name}" + " {y}",
+		            indexLabel: "{name}" + " {y}",            
+                dataPoints: results,
+              },
+            ],
+          });
+          chart.render();
         // Here's where your chart code should go.
       })
   </script>
