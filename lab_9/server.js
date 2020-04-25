@@ -30,7 +30,7 @@ function processDataForFrontEnd(req, res) {
 
   //lab 8 code given by classmate
     fetch(baseURL)
-      .then((res) => res.json())
+      .then((results) => results.json())
       //you will process your data here
       .then((data) => {
         console.log(data);
