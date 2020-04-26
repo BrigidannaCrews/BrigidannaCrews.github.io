@@ -21,9 +21,7 @@
       .then(res => res.json())
       .then(res => {
 
-        return res;
-      })
-      .then(res => {
+        console.log(res.dataPoint);
 
         //given by classmate
         const chart = new CanvasJS.Chart("chartContainer", {
