@@ -21,7 +21,7 @@
       .then(res => res.json())
       .then(res => {
 
-        console.log(res.dataPoint);
+        console.log(res.dataPoints);
 
         //given by classmate
         const chart = new CanvasJS.Chart("chartContainer", {
@@ -38,7 +38,7 @@
                 type: "pie",
 		            toolTipContent: "{name}" + " {y}",
 		            indexLabel: "{name}" + " {y}",            
-                dataPoints: res,
+                dataPoints: res.dataPoints,
               },
             ],
           });

@@ -81,7 +81,6 @@ function processDataForFrontEnd(req, res) {
 // by typing in: localhost:3000/api or 127.0.0.1:3000/api
 app.get('/api', (req, res) => {
   
-  console.log("touched /get");
   processDataForFrontEnd(req, res)});
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
