@@ -22,6 +22,24 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static("public"));
 
+//might start delete here
+async function databaseBoot(){
+  console.log('async DB boot');
+  const db = await open ({
+    filename: '/tmp/database2.db',
+    driver: sqlite3.Database
+  })
+
+  await db.exec('CREATE TABLE IF NOT EXITS user (name)');
+  await db.exec('INSERT INTO user VALUES ("beth")');
+  const results = await db.get('SELECT * FROM user');
+  console.log('Expected result', result);
+};
+
+asynch function writeUser(username){
+  console.log('touched username ${username} ')
+}
+
 function processDataForFrontEnd(req, res) {
   const baseURL = ""; // Enter the URL for the data you would like to retrieve here
 
@@ -63,7 +81,7 @@ app
       writeUser(req.body.name, dbSettings)
       .then((result) => {
         console.log(result);
-        res.send("your request was successful"); // simple mode
+        res.send("As the prophecy foretold, you have succeeded"); // simple mode
       })
       .catch((err) => {
         console.log(err);
