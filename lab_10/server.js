@@ -22,8 +22,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static("public"));
 
-//might start delete here
-async function databaseBoot(){
+/*async function databaseBoot(){
   console.log('async DB boot');
   const db = await open ({
     filename: '/tmp/database2.db',
@@ -61,9 +60,10 @@ function processDataForFrontEnd(req, res) {
 // Syntax change - we don't want to repeat ourselves,
 // or we'll end up with spelling errors in our endpoints.
 //
-app
-  .route("/api")
-  .get((req, res) => {
+
+*/
+  function getResult(req, res) {
+
     // processDataForFrontEnd(req, res)
     (async () => {
       const db = await open(dbSettings);
@@ -71,8 +71,9 @@ app
       console.log("Expected result", result);
       res.json(result);
     })();
-  })
-  .post((req, res) => {
+  }
+
+  function putResult (req, res) {
     console.log("/api post request", req.body);
     if (!req.body.name) {
       console.log(req.body);
@@ -87,6 +88,15 @@ app
         console.log(err);
       });
     }
+  }
+
+  app
+  .route("/api")
+  .get((req, res) => {
+    getResult(req, res);
+  })
+  .put((req, res) => {
+    putResult(req, res);
   });
 
 app.listen(port, () => {
